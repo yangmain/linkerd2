@@ -15,6 +15,8 @@ env:
 - name: LINKERD2_PROXY_DESTINATION_GET_SUFFIXES
   {{- $internalProfileSuffix := printf "svc.%s." .Values.ClusterDomain }}
   value: {{ternary "." $internalProfileSuffix .Values.Proxy.EnableExternalProfiles}}
+- name: LINKERD2_PROXY_DESTINATION_GET_NETWORKS
+  value: 10.0.0.0/8,172.16.0.0/12,192.168.0.0/16
 - name: LINKERD2_PROXY_DESTINATION_PROFILE_SUFFIXES
   {{- $internalProfileSuffix := printf "svc.%s." .Values.ClusterDomain }}
   value: {{ternary "." $internalProfileSuffix .Values.Proxy.EnableExternalProfiles}}
