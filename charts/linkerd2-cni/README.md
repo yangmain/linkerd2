@@ -13,8 +13,7 @@ The following table lists the configurable parameters of the Linkerd2-cni chart 
 
 | Parameter                            | Description                                                           | Default                       |
 |--------------------------------------|-----------------------------------------------------------------------|-------------------------------|
-|`namespace`                           | Control plane namespace                                               | `linkerd`|
-|`controllerNamespaceLabel`            | Control plane label. Do not edit                                      |`linkerd.io/control-plane-ns`|
+|`namespace`                           | CNI plugin plane namespace                                            | `linkerd-cni`|
 |`cniResourceAnnotation`               | CNI resource annotation. Do not edit                                  |`linkerd.io/cni-resource`
 |`inboundProxyPort`                    | Inbound port for the proxy container                                  |`4143`|
 |`outboundProxyPort`                   | Outbound port for the proxy container                                 |`4140`|
